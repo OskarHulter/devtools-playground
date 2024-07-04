@@ -1,0 +1,34 @@
+{
+  "name": "devtools-playground",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@4.3.1",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "ui:dev": "ladle serve",
+    "ui:build": "ladle build",
+    "ui:preview": "ladle preview"
+  },
+  "dependencies": {
+    "@formkit/auto-animate": "0.8.2",
+    "@next/third-parties": "14.2.4",
+    "fuse.js": "7.0.0",
+    "next": "14.2.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "yet-another-react-lightbox": "3.21.0"
+  },
+  "devDependencies": {
+    "@ladle/react": "4.1.0",
+    "@rsdoctor/webpack-plugin": "0.3.6",
+    "@types/node": "20.14.9",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "bundle-stats": "4.13.3",
+    "typescript": "5.5.3",
+    "webpack": "5.92.1"
+  }
+}
