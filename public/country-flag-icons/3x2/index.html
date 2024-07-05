@@ -1,0 +1,70 @@
+<html>
+			<title>Flags (3:2)</title>
+			<body>
+
+		<style>
+			body {
+				margin: 0;
+				font-family: sans-serif;
+			}
+
+			.Countries {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.Country {
+				flex: 0 0 10%;
+				flex-direction: column;
+				align-items: center;
+				padding: 1em;
+				box-sizing: border-box;
+				overflow: hidden;
+			}
+
+			.CountryFlagContainer {
+				position: relative;
+				width: 100%;
+				padding-bottom: calc(100% * 2 / 3);
+			}
+
+			.CountryFlag {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				box-shadow: 0 0 0 1px black;
+			}
+
+			.Country h1 {
+				text-align: center;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		</style>
+	<div class="Countries">
+
+			<section class="Country">
+				<div class="CountryFlagContainer">
+					<a href="https://www.google.com/search?q=Spain%20flag" target="_blank" class="CountryFlagLink">
+						<img title="Spain" class="CountryFlag" src="./ES.svg"/>
+					</a>
+				</div>
+				<h1 title="Spain">
+					ES
+				</h1>
+			</section>
+
+			<section class="Country">
+				<div class="CountryFlagContainer">
+					<a href="https://www.google.com/search?q=United%20States%20flag" target="_blank" class="CountryFlagLink">
+						<img title="United States" class="CountryFlag" src="./US.svg"/>
+					</a>
+				</div>
+				<h1 title="United States">
+					US
+				</h1>
+			</section>
+
+				</div>
+			</body>
+		</html>

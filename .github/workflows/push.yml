@@ -1,0 +1,15 @@
+name: build
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20.11.1
+        cache: yarn
+    - run: curl -sfS https://dotenvx.sh/install.sh | sh
+    - run: dotenvx run -- node build.js
+      env:
+        DOTENV_PRIVATE_KEY_CI: ${{ secrets.DOTENV_PRIVATE_KEY_CI }}

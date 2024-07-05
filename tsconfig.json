@@ -5,6 +5,11 @@
       "dom.iterable",
       "esnext"
     ],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -17,17 +22,48 @@
     "jsx": "preserve",
     "incremental": true,
     "allowUmdGlobalAccess": true,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
       ]
+      ,
+      "~/*": [
+        "modules/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@sln/*": [
+        "./*"
+      ],
+      "@server/*": [
+        "server/*"
+      ],
+      "@prisma/client/*": [
+        "@sln/prisma/client/*"
+      ]
     }
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+"../../packages/app-store/routing-forms/env.d.ts",
+"next-env.d.ts",
+"./src/types/*.d.ts",
+"./src/types/next-auth.d.ts",
+"**/*.ts",
+"**/*.tsx",
+".next/types/**/*.ts",
+"../../packages/features/bookings/lib/getReviewInfo.ts",
+"../../packages/features/bookings/lib/getUserBooking.ts"
+],
   "exclude": [
     "node_modules"
   ]

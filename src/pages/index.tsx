@@ -1,3 +1,4 @@
+import React, { useState, FormEvent } from 'react'
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
@@ -6,7 +7,38 @@ import { YouTubeEmbed } from "@next/third-parties/google";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
 
 export default function Home() {
-	return (
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
+ 
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setIsLoading(true)
+    setError(null) // Clear previous errors when a new request starts
+ 
+    try {
+      const formData = new FormData(event.currentTarget)
+      const response = await fetch('/api/submit', {
+        method: 'POST',
+        body: formData,
+      })
+ 
+      if (!response.ok) {
+        throw new Error('Failed to submit the data. Please try again.')
+      }
+ 
+      // Handle response if necessary
+      const data = await response.json()
+      // ...
+    } catch (error) {
+      // Capture the error message to display to the user
+      setError(error.message)
+      console.error(error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  return (
 		<>
 			<Head>
 				<title>Devtools-playground</title>
@@ -14,11 +46,22 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className={styles.description}>
-				<p>
-					Get started by editing&nbsp;
+			<div className={styles.description}
+
+        <p>
+					Say Hi editing&nbsp;
 					<code className={styles.code}>src/pages/index.tsx</code>
 				</p>
+<div>
+      {error && <div style={{ color: 'red' }}>{error}</div>}
+      <form onSubmit={onSubmit}>
+        <input type="text" name="name" />
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? 'Loading...' : 'Submit'}
+        </button>
+      </form>
+    </div>
+			
 				<div>
 					<a
 						href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
