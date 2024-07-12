@@ -1,6 +1,7 @@
 {
   "@schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@sln/tsconfig/react-library.json",
+  "extends": "../../tsconfig.json",
+  // "extends": "@sln/tsconfig/react-library.json",
   "compilerOptions": {
     "resolveJsonModule": true,
     "experimentalDecorators": true
