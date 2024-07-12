@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.erd": "json",
+    "*.vuerd": "json",
+    "*.json": "jsonc",
+    "plyconfig.json": "jsonc"
+  },
+  "cSpell.words": [
+    "dotenvx"
+  ]
+}
