@@ -1,28 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-E2E-Testing
+## Tooling
+
+- need data parsing or encoding? [CyberChef](https://gchq.github.io/CyberChef/)
+
+
+## E2E-Testing
+
 Be sure to set the environment variable NEXTAUTH_URL to the correct value. If you are running locally, as the documentation within .env.example mentions, the value should be http://localhost:3000.
 
-# In a terminal just run:
+
+
+## In a terminal just run:
+
 yarn test-e2e
 
-# To open the last HTML report run:
+## To open the last HTML report run:
+
 yarn playwright show-report test-results/reports/playwright-html-report
 Resolving issues
 E2E test browsers not installed

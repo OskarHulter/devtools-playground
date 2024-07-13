@@ -1,0 +1,539 @@
+{
+  ".VSCodeCounter": {
+    "2024-07-12_03-12-45": "(...)",
+    "2024-07-12_03-37-21": "(...)",
+    "2024-07-12_03-37-59": "(...)",
+    "2024-07-12_03-43-08": "(...)"
+  },
+  ".editorconfig": null,
+  ".env": null,
+  ".env.appStore.example": null,
+  ".env.ci": null,
+  ".env.example": null,
+  ".env.local": null,
+  ".env.test.example": null,
+  ".env.test.local": null,
+  ".eslintignore": null,
+  ".eslintrc.js": null,
+  ".git": "(...)",
+  ".gitattributes": null,
+  ".github": "(...)",
+  ".gitignore": null,
+  ".npmrc": null,
+  ".prettierignore": null,
+  ".prettierrc.js": null,
+  ".vscode": "(...)",
+  ".yarn": {
+    "cache": "(...)",
+    "install-state.gz": null
+  },
+  ".yarnrc.yml": null,
+  "LICENSE": null,
+  "README.md": null,
+  "crowdin.yml": null,
+  "instrumentation.ts": null,
+  "middleware.ts": null,
+  "next-env.d.ts": null,
+  "next.config.js": null,
+  "next.config.mjs": null,
+  "node_modules": "(...)",
+  "package.json": null,
+  "packages": {
+    "features": {
+      "reviews": {
+        "lib": {
+          "SystemField.ts": null,
+          "create-instant-review.ts": null,
+          "create-review.ts": null,
+          "doesReviewRequireConfirmation.ts": null,
+          "get-review.ts": null,
+          "getAllCredentialsForUsersOnReview": {
+            "getAllCredentials.test.ts": null,
+            "getAllCredentials.ts": null,
+            "refreshCredential.ts": null,
+            "refreshCredentials.ts": null
+          },
+          "getLocationOptionsForSelect.ts": null,
+          "getReviewDataSchema copy.ts": null,
+          "getReviewDataSchema.ts": null,
+          "getReviewDataSchemaForApi.ts": null,
+          "getReviewFields.ts": null,
+          "getReviewInfo.ts": null,
+          "getReviewResponsesSchema.test.ts": null,
+          "getReviewResponsesSchema.ts": null,
+          "getSlnEventResponses.ts": null,
+          "getUserReview.ts": null,
+          "getWebhookPayloadForReview.ts": null,
+          "handleCancelReview.ts": null,
+          "handleConfirmation.ts": null,
+          "handleNewReview": {
+            "checkIfReviewerEmailIsBlocked.ts": null,
+            "getEventTypesFromDB.ts": null,
+            "getRequiredConfirmationFlags.ts": null,
+            "handleAppsStatus.ts": null,
+            "handleCustomInputs.ts": null,
+            "loadUsers.ts": null,
+            "test": {
+              "fresh-review.test.ts": null,
+              "review-limits.test.ts": null
+            }
+          },
+          "handleNewReview.ts": null,
+          "handleReviewRequested.ts": null,
+          "handleWebhookTrigger.ts": null,
+          "index.ts": null,
+          "integrityChecker": {
+            "checkForConflicts.ts": null
+          },
+          "isEventTypeLoggingEnabled.ts": null,
+          "review-event-form": {
+            "review-to-mutation-input-mapper.ts": null
+          },
+          "timePreferences.ts": null,
+          "useFilterQuery.tsx": null
+        }
+      }
+    }
+  },
+  "pagesAndRewritePath.js": null,
+  "playwright": {
+    "auth": {
+      "auth-index.e2e.ts": null,
+      "delete-account.e2e.ts": null,
+      "forgot-password.e2e.ts": null
+    },
+    "consumer": {
+      "ab-tests-redirect.e2e.ts": null,
+      "app-list-card.e2e.ts": null,
+      "app-store.e2e.ts": null,
+      "availability.e2e.ts": null,
+      "booking-limits.e2e.ts": null,
+      "booking-pages.e2e.ts": null,
+      "bookings-list.e2e.ts": null,
+      "change-password.e2e.ts": null,
+      "change-username.e2e.ts": null,
+      "dynamic-booking-pages.e2e.ts": null,
+      "embed-code-generator.e2e.ts": null,
+      "event-types.e2e.ts": null,
+      "integrations-stripe.e2e.ts": null,
+      "integrations.e2e.ts": null,
+      "locale.e2e.ts": null,
+      "login.2fa.e2e.ts": null,
+      "login.api.e2e.ts": null,
+      "login.e2e.ts": null,
+      "login.oauth.e2e.ts": null,
+      "manage-booking-questions.e2e.ts": null,
+      "managed-event-types.e2e.ts": null,
+      "oauth-provider.e2e.ts": null,
+      "profile.e2e.ts": null,
+      "saml.e2e.ts": null,
+      "settings-admin.e2e.ts": null,
+      "signup.e2e.ts": null,
+      "teams.e2e.ts": null,
+      "unpublished.e2e.ts": null,
+      "webhook.e2e.ts": null,
+      "wipe-my-bu.e2e.ts": null,
+      "workflow.e2e.ts": null
+    },
+    "fixtures": {
+      "apps.ts": null,
+      "bookings.ts": null,
+      "emails.ts": null,
+      "embeds.ts": null,
+      "features.ts": null,
+      "orgs.ts": null,
+      "regularBookings.ts": null,
+      "servers.ts": null,
+      "users.ts": null,
+      "webhooks.ts": null
+    },
+    "lib": {
+      "fixtures.ts": null,
+      "future-legacy-routes.ts": null,
+      "next-server.ts": null,
+      "teardown.ts": null,
+      "testUtils.ts": null
+    }
+  },
+  "playwright.config.ts": null,
+  "postcss.config.js": null,
+  "previewConfig.json": null,
+  "project_layout.md": null,
+  "project_layout.txt": null,
+  "public": {
+    "browserconfig.xml": null,
+    "country-flag-icons": {
+      "3x2": {
+        "ES.svg": null,
+        "US.svg": null,
+        "flags.css": null,
+        "index.html": null
+      }
+    },
+    "favicon.ico": null,
+    "images": {
+      "next.svg": null,
+      "vercel.svg": null
+    },
+    "next.svg": null,
+    "robots.txt": null,
+    "static": {
+      "locales": {
+        "en": {
+          "common.json": null
+        },
+        "es": {
+          "common.json": null
+        }
+      }
+    },
+    "vercel.svg": null
+  },
+  "scripts": {
+    "check-missing-translations.ts": null,
+    "find-email-case-insensitive-duplicates.sql": null,
+    "getSubDomainRegExp.js": null,
+    "production-deploy.sh": null,
+    "staging-deploy.sh": null,
+    "ts-check-changed-files.ts": null
+  },
+  "sentry.client.config.js": null,
+  "server": {
+    "lib": {
+      "auth": {
+        "login": {
+          "getServerSideProps.ts": null
+        },
+        "logout": "(...)",
+        "signin": {
+          "getServerSideProps.ts": null
+        },
+        "sso": {
+          "[provider]": {
+            "getServerSideProps.ts": null
+          },
+          "direct": {
+            "getServerSideProps.ts": null
+          }
+        },
+        "verify": {
+          "getServerSideProps.ts": null
+        }
+      },
+      "constants.ts": null,
+      "forgot-password": {
+        "[id]": {
+          "getServerSideProps.ts": null
+        },
+        "getServerSideProps.ts": null
+      },
+      "getTranslations.ts": null,
+      "setup": {
+        "getServerSideProps.ts": null
+      },
+      "ssg.ts": null,
+      "ssr.ts": null
+    }
+  },
+  "setupVitest.ts": null,
+  "src": {
+    "pages": {
+      "404.tsx": null,
+      "500.tsx": null,
+      "_app.tsx": null,
+      "_document.tsx": null,
+      "_error.tsx": null,
+      "api": {
+        "auth": {
+          "[...nextauth].ts": null,
+          "change-password.ts": null,
+          "forgot-password.ts": null,
+          "oauth": {
+            "me.ts": null,
+            "refresh-token.ts": null,
+            "token.ts": null
+          },
+          "oidc.ts": null,
+          "reset-password.ts": null,
+          "saml": {
+            "authorize.ts": null,
+            "callback.ts": null,
+            "token.ts": null,
+            "userinfo.ts": null
+          },
+          "setup.ts": null,
+          "signup.ts": null,
+          "two-factor": {
+            "totp": {
+              "disable.ts": null,
+              "enable.ts": null,
+              "setup.ts": null
+            }
+          },
+          "verify-email.ts": null
+        },
+        "avatar": {
+          "[uuid].ts": null
+        },
+        "business-units": {
+          "[business-unit]": {
+            "upgrade.ts": null
+          },
+          "api": {
+            "create.ts": null
+          },
+          "create.ts": null
+        },
+        "cancel.ts": null,
+        "collect-events.ts": null,
+        "cookie.ts": null,
+        "cron": {
+          "bookingReminder.ts": null,
+          "calendar-cache-cleanup.ts": null,
+          "changeTimeZone.ts": null,
+          "monthlyDigestEmail.ts": null,
+          "syncAppMeta.ts": null,
+          "webhookTriggers.ts": null,
+          "workflows": {
+            "scheduleEmailReminders.ts": null
+          }
+        },
+        "email.ts": null,
+        "future-opt-in.ts": null,
+        "get-inbound-dynamic-variables.ts": null,
+        "hello.ts": null,
+        "insights": {
+          "index.tsx": null
+        },
+        "intercom-hash.ts": null,
+        "link.ts": null,
+        "logo.ts": null,
+        "me.ts": null,
+        "review": {
+          "event.ts": null,
+          "instant-event.ts": null,
+          "reocurring-event.ts": null
+        },
+        "submit.ts": null,
+        "username.ts": null,
+        "version.ts": null,
+        "webhook": {
+          "app-credential.ts": null
+        }
+      },
+      "connect-and-join.tsx": null,
+      "index.tsx": null,
+      "landingPage.tsx": null,
+      "maintainance.tsx": null,
+      "more.tsx": null,
+      "search.tsx": null,
+      "signup.tsx": null,
+      "upgrade.tsx": null
+    },
+    "styles": {
+      "Home.module.css": null,
+      "globals.css": null
+    },
+    "types": {
+      "App.d.ts": null,
+      "AppGetServerSideProps.d.ts": null,
+      "Calendar.d.ts": null,
+      "CrmService.d.ts": null,
+      "Event.d.ts": null,
+      "EventManager.d.ts": null,
+      "PaymentService.d.ts": null,
+      "SVGComponent.d.ts": null,
+      "UserProfile.d.ts": null,
+      "business-days-plugin.d.ts": null,
+      "environment.d.ts": null,
+      "inferSSRProps.d.ts": null,
+      "next-auth.d.ts": null,
+      "next.d.ts": null,
+      "oath.d.ts": null,
+      "tanstack-table.d.ts": null,
+      "utils.d.ts": null,
+      "window.d.ts": null
+    },
+    "ui": {
+      "components": {
+        "all-questions": {
+          "allQuestions.test.tsx": null,
+          "utils.ts": null
+        },
+        "breadcrumb": {
+          "Breadcrumb.tsx": null,
+          "breadcrumb.stories.mdx": null,
+          "breadcrumb.test.tsx": null,
+          "index.ts": null
+        },
+        "button": {
+          "Button.tsx": null,
+          "LinkIconButton.tsx": null,
+          "button.stories.mdx": null,
+          "button.test.tsx": null,
+          "index.ts": null
+        },
+        "data-table": {
+          "DataTableFilter.tsx": null,
+          "DataTablePagination.tsx": null,
+          "DataTableSelectionBar.tsx": null,
+          "DataTableToolbar.tsx": null,
+          "__stories__": {
+            "columns.tsx": null,
+            "data.tsx": null,
+            "datatable.stories.mdx": null
+          },
+          "index.tsx": null
+        },
+        "error-boundary": {
+          "ErrorBoundary.tsx": null,
+          "error-boundary.test.tsx": null,
+          "errorBoundary.stories.mdx": null,
+          "index.ts": null
+        },
+        "form": {
+          "AddressInput.tsx": null,
+          "AddressInputLazy.tsx": null,
+          "PhoneInput.tsx": null,
+          "PhoneInputLazy.tsx": null,
+          "Select.tsx": null,
+          "fields.tsx": null,
+          "index.tsx": null,
+          "inputs": {
+            "Form.tsx": null,
+            "HintOrErrors.tsx": null,
+            "Input.tsx": null,
+            "InputError.tsx": null,
+            "InputFieldWithSelect.tsx": null,
+            "Label.tsx": null,
+            "TextField.tsx": null,
+            "input.test.tsx": null,
+            "inputs.stories.mdx": null,
+            "types.d.ts": null
+          },
+          "radio-area": {
+            "Radio.tsx": null,
+            "RadioAreaGroup.tsx": null,
+            "index.ts": null
+          },
+          "timezone-select": {
+            "TimezoneSelect.tsx": null,
+            "timezone-select.test.tsx": null,
+            "timezoneSelect.stories.mdx": null
+          },
+          "wizard": {
+            "WizardForm.tsx": null,
+            "index.ts": null,
+            "wizard.stories.mdx": null,
+            "wizardForm.test.tsx": null
+          }
+        },
+        "head-seo": {
+          "HeadSeo.tsx": null,
+          "head-seo.test.tsx": null,
+          "index.ts": null
+        },
+        "icon": {
+          "Discord.tsx": null,
+          "Icon.tsx": null,
+          "IconDev.tsx": null,
+          "IconProd.tsx": null,
+          "SatSymbol.tsx": null,
+          "Spinner.tsx": null,
+          "dynamicIconImports.tsx": null
+        },
+        "image-gallery": {
+          "image-gallery.tsx": null
+        },
+        "layout": "(...)",
+        "logo": {
+          "Logo.tsx": null,
+          "index.ts": null,
+          "logo.stories.mdx": null
+        },
+        "meta": {
+          "Meta.tsx": null,
+          "index.ts": null,
+          "meta.test.tsx": null
+        },
+        "mocks": {
+          "AsyncDataProvider.tsx": null
+        },
+        "navigation": {
+          "index.tsx": null,
+          "tabs": {
+            "HorizontalTabItem.tsx": null,
+            "HorizontalTabs.tsx": null,
+            "VerticalTabItem.tsx": null,
+            "VerticalTabs.tsx": null,
+            "__stories__": {
+              "horizontalTabs.stories.mdx": null,
+              "verticalTabs.stories.mdx": null
+            },
+            "navigation.test.tsx": null
+          }
+        },
+        "nextjs-image.tsx": null,
+        "number-list.tsx": null,
+        "skeleton": {
+          "Loader.tsx": null,
+          "index.tsx": null,
+          "skeleton.stories.mdx": null
+        },
+        "unpublished-entity": {
+          "test-setup.ts": null
+        }
+      },
+      "data-list": {
+        "data-list.tsx": null
+      },
+      "hello.stories.tsx": null,
+      "index.tsx": null,
+      "layouts": "(...)",
+      "package": {
+        ".eslintignore": null,
+        "package.json": null
+      },
+      "styles": {
+        "shared-globals.css": null,
+        "useSLNTheme.tsx": null
+      },
+      "tsconfig.json": null
+    }
+  },
+  "styles": {
+    "globals.css": null
+  },
+  "test": {
+    ".env.test.example": null,
+    "README.md": null,
+    "docker-compose.yml": null,
+    "fixtures": {
+      "fixtures.ts": null
+    },
+    "handlers": {
+      "requestReschedule.ts": null
+    },
+    "jest-resolver.js": null,
+    "jest-setup.js": null,
+    "lib": {
+      "getTimezone.test.ts": null,
+      "next-config.test.ts": null
+    },
+    "utils": {
+      "bookingScenario": {
+        "MockPaymentService.ts": null,
+        "bookingScenario.ts": null,
+        "createMockNextJsRequest.ts": null,
+        "expects.ts": null,
+        "getMockRequestDataForBooking copy.ts": null,
+        "getMockRequestDataForCancelBooking.ts": null,
+        "getSampleUserInSession.ts": null,
+        "setupAndTeardown.ts": null,
+        "test.ts": null
+      }
+    }
+  },
+  "tsconfig.json": null,
+  "vitest.workspace.ts": null
+}

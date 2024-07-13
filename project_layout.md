@@ -1,0 +1,447 @@
+--- Folder Layout ---
+- .VSCodeCounter/
+  - 2024-07-12_03-12-45/ (...)
+  - 2024-07-12_03-37-21/ (...)
+  - 2024-07-12_03-37-59/ (...)
+  - 2024-07-12_03-43-08/ (...)
+- .editorconfig
+- .env
+- .env.appStore.example
+- .env.ci
+- .env.example
+- .env.local
+- .env.test.example
+- .env.test.local
+- .eslintignore
+- .eslintrc.js
+- .git/ (...)
+- .gitattributes
+- .github/ (...)
+- .gitignore
+- .npmrc
+- .prettierignore
+- .prettierrc.js
+- .vscode/ (...)
+- .yarn/
+  - cache/ (...)
+  - install-state.gz
+- .yarnrc.yml
+- LICENSE
+- README.md
+- crowdin.yml
+- instrumentation.ts
+- middleware.ts
+- next-env.d.ts
+- next.config.js
+- next.config.mjs
+- node_modules/ (...)
+- package.json
+- packages/
+  - features/
+    - reviews/
+      - lib/
+        - SystemField.ts
+        - create-instant-review.ts
+        - create-review.ts
+        - doesReviewRequireConfirmation.ts
+        - get-review.ts
+        - getAllCredentialsForUsersOnReview/
+          - getAllCredentials.test.ts
+          - getAllCredentials.ts
+          - refreshCredential.ts
+          - refreshCredentials.ts
+        - getLocationOptionsForSelect.ts
+        - getReviewDataSchema copy.ts
+        - getReviewDataSchema.ts
+        - getReviewDataSchemaForApi.ts
+        - getReviewFields.ts
+        - getReviewInfo.ts
+        - getReviewResponsesSchema.test.ts
+        - getReviewResponsesSchema.ts
+        - getSlnEventResponses.ts
+        - getUserReview.ts
+        - getWebhookPayloadForReview.ts
+        - handleCancelReview.ts
+        - handleConfirmation.ts
+        - handleNewReview/
+          - checkIfReviewerEmailIsBlocked.ts
+          - getEventTypesFromDB.ts
+          - getRequiredConfirmationFlags.ts
+          - handleAppsStatus.ts
+          - handleCustomInputs.ts
+          - loadUsers.ts
+          - test/
+            - fresh-review.test.ts
+            - review-limits.test.ts
+        - handleNewReview.ts
+        - handleReviewRequested.ts
+        - handleWebhookTrigger.ts
+        - index.ts
+        - integrityChecker/
+          - checkForConflicts.ts
+        - isEventTypeLoggingEnabled.ts
+        - review-event-form/
+          - review-to-mutation-input-mapper.ts
+        - timePreferences.ts
+        - useFilterQuery.tsx
+- pagesAndRewritePath.js
+- playwright/
+  - auth/
+    - auth-index.e2e.ts
+    - delete-account.e2e.ts
+    - forgot-password.e2e.ts
+  - consumer/
+    - ab-tests-redirect.e2e.ts
+    - app-list-card.e2e.ts
+    - app-store.e2e.ts
+    - availability.e2e.ts
+    - booking-limits.e2e.ts
+    - booking-pages.e2e.ts
+    - bookings-list.e2e.ts
+    - change-password.e2e.ts
+    - change-username.e2e.ts
+    - dynamic-booking-pages.e2e.ts
+    - embed-code-generator.e2e.ts
+    - event-types.e2e.ts
+    - integrations-stripe.e2e.ts
+    - integrations.e2e.ts
+    - locale.e2e.ts
+    - login.2fa.e2e.ts
+    - login.api.e2e.ts
+    - login.e2e.ts
+    - login.oauth.e2e.ts
+    - manage-booking-questions.e2e.ts
+    - managed-event-types.e2e.ts
+    - oauth-provider.e2e.ts
+    - profile.e2e.ts
+    - saml.e2e.ts
+    - settings-admin.e2e.ts
+    - signup.e2e.ts
+    - teams.e2e.ts
+    - unpublished.e2e.ts
+    - webhook.e2e.ts
+    - wipe-my-bu.e2e.ts
+    - workflow.e2e.ts
+  - fixtures/
+    - apps.ts
+    - bookings.ts
+    - emails.ts
+    - embeds.ts
+    - features.ts
+    - orgs.ts
+    - regularBookings.ts
+    - servers.ts
+    - users.ts
+    - webhooks.ts
+  - lib/
+    - fixtures.ts
+    - future-legacy-routes.ts
+    - next-server.ts
+    - teardown.ts
+    - testUtils.ts
+- playwright.config.ts
+- postcss.config.js
+- previewConfig.json
+- project_layout.txt
+- public/
+  - browserconfig.xml
+  - country-flag-icons/
+    - 3x2/
+      - ES.svg
+      - US.svg
+      - flags.css
+      - index.html
+  - favicon.ico
+  - images/
+    - next.svg
+    - vercel.svg
+  - next.svg
+  - robots.txt
+  - static/
+    - locales/
+      - en/
+        - common.json
+      - es/
+        - common.json
+  - vercel.svg
+- scripts/
+  - check-missing-translations.ts
+  - find-email-case-insensitive-duplicates.sql
+  - getSubDomainRegExp.js
+  - production-deploy.sh
+  - staging-deploy.sh
+  - ts-check-changed-files.ts
+- sentry.client.config.js
+- server/
+  - lib/
+    - auth/
+      - login/
+        - getServerSideProps.ts
+      - logout/ (...)
+      - signin/
+        - getServerSideProps.ts
+      - sso/
+        - [provider]/
+          - getServerSideProps.ts
+        - direct/
+          - getServerSideProps.ts
+      - verify/
+        - getServerSideProps.ts
+    - constants.ts
+    - forgot-password/
+      - [id]/
+        - getServerSideProps.ts
+      - getServerSideProps.ts
+    - getTranslations.ts
+    - setup/
+      - getServerSideProps.ts
+    - ssg.ts
+    - ssr.ts
+- setupVitest.ts
+- src/
+  - pages/
+    - 404.tsx
+    - 500.tsx
+    - _app.tsx
+    - _document.tsx
+    - _error.tsx
+    - api/
+      - auth/
+        - [...nextauth].ts
+        - change-password.ts
+        - forgot-password.ts
+        - oauth/
+          - me.ts
+          - refresh-token.ts
+          - token.ts
+        - oidc.ts
+        - reset-password.ts
+        - saml/
+          - authorize.ts
+          - callback.ts
+          - token.ts
+          - userinfo.ts
+        - setup.ts
+        - signup.ts
+        - two-factor/
+          - totp/
+            - disable.ts
+            - enable.ts
+            - setup.ts
+        - verify-email.ts
+      - avatar/
+        - [uuid].ts
+      - business-units/
+        - [business-unit]/
+          - upgrade.ts
+        - api/
+          - create.ts
+        - create.ts
+      - cancel.ts
+      - collect-events.ts
+      - cookie.ts
+      - cron/
+        - bookingReminder.ts
+        - calendar-cache-cleanup.ts
+        - changeTimeZone.ts
+        - monthlyDigestEmail.ts
+        - syncAppMeta.ts
+        - webhookTriggers.ts
+        - workflows/
+          - scheduleEmailReminders.ts
+      - email.ts
+      - future-opt-in.ts
+      - get-inbound-dynamic-variables.ts
+      - hello.ts
+      - insights/
+        - index.tsx
+      - intercom-hash.ts
+      - link.ts
+      - logo.ts
+      - me.ts
+      - review/
+        - event.ts
+        - instant-event.ts
+        - reocurring-event.ts
+      - submit.ts
+      - username.ts
+      - version.ts
+      - webhook/
+        - app-credential.ts
+    - connect-and-join.tsx
+    - index.tsx
+    - landingPage.tsx
+    - maintainance.tsx
+    - more.tsx
+    - search.tsx
+    - signup.tsx
+    - upgrade.tsx
+  - styles/
+    - Home.module.css
+    - globals.css
+  - types/
+    - App.d.ts
+    - AppGetServerSideProps.d.ts
+    - Calendar.d.ts
+    - CrmService.d.ts
+    - Event.d.ts
+    - EventManager.d.ts
+    - PaymentService.d.ts
+    - SVGComponent.d.ts
+    - UserProfile.d.ts
+    - business-days-plugin.d.ts
+    - environment.d.ts
+    - inferSSRProps.d.ts
+    - next-auth.d.ts
+    - next.d.ts
+    - oath.d.ts
+    - tanstack-table.d.ts
+    - utils.d.ts
+    - window.d.ts
+  - ui/
+    - components/
+      - all-questions/
+        - allQuestions.test.tsx
+        - utils.ts
+      - breadcrumb/
+        - Breadcrumb.tsx
+        - breadcrumb.stories.mdx
+        - breadcrumb.test.tsx
+        - index.ts
+      - button/
+        - Button.tsx
+        - LinkIconButton.tsx
+        - button.stories.mdx
+        - button.test.tsx
+        - index.ts
+      - data-table/
+        - DataTableFilter.tsx
+        - DataTablePagination.tsx
+        - DataTableSelectionBar.tsx
+        - DataTableToolbar.tsx
+        - __stories__/
+          - columns.tsx
+          - data.tsx
+          - datatable.stories.mdx
+        - index.tsx
+      - error-boundary/
+        - ErrorBoundary.tsx
+        - error-boundary.test.tsx
+        - errorBoundary.stories.mdx
+        - index.ts
+      - form/
+        - AddressInput.tsx
+        - AddressInputLazy.tsx
+        - PhoneInput.tsx
+        - PhoneInputLazy.tsx
+        - Select.tsx
+        - fields.tsx
+        - index.tsx
+        - inputs/
+          - Form.tsx
+          - HintOrErrors.tsx
+          - Input.tsx
+          - InputError.tsx
+          - InputFieldWithSelect.tsx
+          - Label.tsx
+          - TextField.tsx
+          - input.test.tsx
+          - inputs.stories.mdx
+          - types.d.ts
+        - radio-area/
+          - Radio.tsx
+          - RadioAreaGroup.tsx
+          - index.ts
+        - timezone-select/
+          - TimezoneSelect.tsx
+          - timezone-select.test.tsx
+          - timezoneSelect.stories.mdx
+        - wizard/
+          - WizardForm.tsx
+          - index.ts
+          - wizard.stories.mdx
+          - wizardForm.test.tsx
+      - head-seo/
+        - HeadSeo.tsx
+        - head-seo.test.tsx
+        - index.ts
+      - icon/
+        - Discord.tsx
+        - Icon.tsx
+        - IconDev.tsx
+        - IconProd.tsx
+        - SatSymbol.tsx
+        - Spinner.tsx
+        - dynamicIconImports.tsx
+      - image-gallery/
+        - image-gallery.tsx
+      - layout/ (...)
+      - logo/
+        - Logo.tsx
+        - index.ts
+        - logo.stories.mdx
+      - meta/
+        - Meta.tsx
+        - index.ts
+        - meta.test.tsx
+      - mocks/
+        - AsyncDataProvider.tsx
+      - navigation/
+        - index.tsx
+        - tabs/
+          - HorizontalTabItem.tsx
+          - HorizontalTabs.tsx
+          - VerticalTabItem.tsx
+          - VerticalTabs.tsx
+          - __stories__/
+            - horizontalTabs.stories.mdx
+            - verticalTabs.stories.mdx
+          - navigation.test.tsx
+      - nextjs-image.tsx
+      - number-list.tsx
+      - skeleton/
+        - Loader.tsx
+        - index.tsx
+        - skeleton.stories.mdx
+      - unpublished-entity/
+        - test-setup.ts
+    - data-list/
+      - data-list.tsx
+    - hello.stories.tsx
+    - index.tsx
+    - layouts/ (...)
+    - package/
+      - .eslintignore
+      - package.json
+    - styles/
+      - shared-globals.css
+      - useSLNTheme.tsx
+    - tsconfig.json
+- styles/
+  - globals.css
+- test/
+  - .env.test.example
+  - README.md
+  - docker-compose.yml
+  - fixtures/
+    - fixtures.ts
+  - handlers/
+    - requestReschedule.ts
+  - jest-resolver.js
+  - jest-setup.js
+  - lib/
+    - getTimezone.test.ts
+    - next-config.test.ts
+  - utils/
+    - bookingScenario/
+      - MockPaymentService.ts
+      - bookingScenario.ts
+      - createMockNextJsRequest.ts
+      - expects.ts
+      - getMockRequestDataForBooking copy.ts
+      - getMockRequestDataForCancelBooking.ts
+      - getSampleUserInSession.ts
+      - setupAndTeardown.ts
+      - test.ts
+- tsconfig.json
+- vitest.workspace.ts
