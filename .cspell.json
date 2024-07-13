@@ -1,0 +1,41 @@
+{
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/.yarn/**",
+    "**/.nx/**",
+    "**/vscode-extension/**",
+    "**/.git/**",
+    "**/.pnpm-lock.json",
+    ".vscode",
+    "megalinter",
+    "package-lock.json",
+    "report"
+  ],
+  "language": "en",
+  "noConfigSearch": true,
+  "words": [
+    "boxyhq",
+    "bufferutil",
+    "cmdk",
+    "csstype",
+    "daterange",
+    "dotenvx",
+    "glidejs",
+    "kanaries",
+    "kbar",
+    "lightbox",
+    "lightningcss",
+    "megalinter",
+    "openfeature",
+    "opentelemetry",
+    "oxsecurity",
+    "preact",
+    "ratelimit",
+    "rrule",
+    "Rsdoctor",
+    "tseslint",
+    "wojtekmaj"
+  ],
+  "version": "0.2"
+}

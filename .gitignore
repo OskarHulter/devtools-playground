@@ -139,3 +139,5 @@ apps/auth
 # React Component Preview
 previewConfig.json
 .VSCodeCounter/
+
+megalinter-reports/
