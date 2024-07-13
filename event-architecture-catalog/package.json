@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "event-architecture-catalog",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "v20.11.1"
+  },
+  "scripts": {
+    "dev": "eventcatalog dev",
+    "build": "eventcatalog build",
+    "start": "eventcatalog start",
+    "preview": "eventcatalog preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@eventcatalog/core": "latest"
+  },
+  "devDependencies": {
+    "@parcel/watcher": "2.4.1",
+    "concurrently": "8.2.2"
+  }
+}

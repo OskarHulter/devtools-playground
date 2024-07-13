@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react'
+import React, { useState, type FormEvent } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
@@ -46,13 +46,8 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className={styles.description}
+			<div className={styles.description}>
 
-        <p>
-					Say Hi editing&nbsp;
-					<code className={styles.code}>src/pages/index.tsx</code>
-				</p>
-<div>
       {error && <div style={{ color: 'red' }}>{error}</div>}
       <form onSubmit={onSubmit}>
         <input type="text" name="name" />
@@ -61,7 +56,7 @@ export default function Home() {
         </button>
       </form>
     </div>
-			
+    <Marquee>
 				<div>
 					<a
 						href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -79,7 +74,7 @@ export default function Home() {
 						/>
 					</a>
 				</div>
-			</div>
+		
 
 			<div className={styles.center}>
 				<Image
@@ -91,7 +86,7 @@ export default function Home() {
 					priority
 				/>
 			</div>
-
+    </Marquee>
 			<Marquee>
 				<div className={styles.grid}>
 					<a
