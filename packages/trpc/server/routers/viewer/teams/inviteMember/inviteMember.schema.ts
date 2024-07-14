@@ -1,0 +1,64 @@
+import { MAX_NB_INVITES } from "@sln/lib/constants";
+import { MembershipRole } from "@sln/prisma/enums";
+import { z } from "zod";
+
+export const ZInviteMemberInputSchema = z.object({
+  teamId: z.number(),
+  usernameOrEmail: z
+    .union([
+      z.string(),
+      z
+        .union([
+          z.string(),
+          z.object({
+            email: z.string().email(),
+            role: z.nativeEnum(MembershipRole),
+          }),
+        ])
+        .array(),
+    ])
+    .transform((usernameOrEmail) => {
+      if (typeof usernameOrEmail === "string") {
+        return usernameOrEmail.trim().toLowerCase();
+      }
+      return usernameOrEmail.map((item) => {
+        if (typeof item === "string") {
+          return item.trim().toLowerCase();
+        }
+
+        return {
+          ...item,
+          email: item.email.trim().toLowerCase(),
+        };
+      });
+    })
+    .refine(
+      (value) => {
+        if (Array.isArray(value)) {
+          if (value.length > MAX_NB_INVITES) {
+            return false;
+          }
+        }
+        return true;
+      },
+      {
+        message: `You are limited to inviting a maximum of ${MAX_NB_INVITES} users at once.`,
+      }
+    )
+    .refine(
+      (value) => {
+        if (Array.isArray(value)) {
+          return !value.some(
+            (email) => !z.string().email().safeParse(email).success
+          );
+        }
+        return true;
+      },
+      { message: "Bulk invitations are restricted to email addresses only." }
+    ),
+  role: z.nativeEnum(MembershipRole).optional(),
+  language: z.string(),
+  isOrg: z.boolean().default(false),
+});
+
+export type TInviteMemberInputSchema = z.infer<typeof ZInviteMemberInputSchema>;

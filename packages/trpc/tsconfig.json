@@ -1,0 +1,4 @@
+{
+  "extends": "@sln/tsconfig/react-library.json",
+  "include": ["client", "next", "react", "server"]
+}
