@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "name": "@sln/gtm",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "dependencies": {
+    "@sln/lib": "*"
+  },
+  "devDependencies": {
+    "@sln/types": "*"
+  },
+  "description": "App to install Google Tag Manager"
+}

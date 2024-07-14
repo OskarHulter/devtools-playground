@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "name": "@sln/paypal",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "dependencies": {
+    "@sln/lib": "*"
+  },
+  "devDependencies": {
+    "@sln/types": "*"
+  },
+  "description": "Paypal payment app by Cal.com"
+}

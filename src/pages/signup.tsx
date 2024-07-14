@@ -17,7 +17,7 @@ import getStripe from "@sln/app-store/stripepayment/lib/client";
 import { getPremiumPlanPriceValue } from "@sln/app-store/stripepayment/lib/utils";
 import { getOrgUsernameFromEmail } from "@sln/features/auth/signup/utils/getOrgUsernameFromEmail";
 import { getOrgFullOrigin } from "@sln/features/ee/organizations/lib/orgDomains";
-import { classNames } from "@sln/lib";
+import classNames from "clsx/lite";
 import {
 	APP_NAME,
 	URL_PROTOCOL_REGEX,

@@ -17,9 +17,12 @@
   "words": [
     "boxyhq",
     "bufferutil",
+    "clsx",
     "cmdk",
+    "codegen",
     "csstype",
     "daterange",
+    "dont",
     "dotenvx",
     "glidejs",
     "kanaries",
@@ -34,7 +37,11 @@
     "ratelimit",
     "rrule",
     "Rsdoctor",
+    "schemaorg",
+    "todesktop",
+    "trivago",
     "tseslint",
+    "unkey",
     "wojtekmaj"
   ],
   "version": "0.2"

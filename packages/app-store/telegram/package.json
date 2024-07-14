@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "name": "@sln/telegram",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "description": "Schedule a chat with your guests or have a Telegram Video call.",
+  "dependencies": {
+    "@sln/lib": "*"
+  },
+  "devDependencies": {
+    "@sln/types": "*"
+  }
+}

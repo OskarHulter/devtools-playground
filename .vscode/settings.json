@@ -4,5 +4,7 @@
     "*.vuerd": "json",
     "*.json": "jsonc",
     "plyconfig.json": "jsonc"
-  }
+  },
+  "WillLuke.nextjs.addTypesOnSave": true,
+  "WillLuke.nextjs.hasPrompted": true
 }

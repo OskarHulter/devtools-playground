@@ -18,7 +18,7 @@ import {
 import { useState } from "react";
 import { useVirtual } from "react-virtual";
 
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx/lite";
 
 import {
 	Table,

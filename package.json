@@ -3,11 +3,41 @@
   "version": "0.1.0",
   "private": true,
   "packageManager": "yarn@4.3.1",
+  "engines": {
+    "node": "^20.11.1",
+    "yarn": "^4.3.1"
+  },
+  "workspaces": [
+    "apps/*",
+    "apps/api/*",
+    "packages/*",
+    "packages/embeds/*",
+    "packages/features/*",
+    "packages/app-store/*",
+    "packages/platform/*",
+    "packages/platform/examples/base"
+  ],
+  "prisma": {
+    "schema": "packages/prisma/schema.prisma",
+    "seed": "ts-node --transpile-only ./packages/prisma/seed.ts"
+  },
   "nextBundleAnalysis": {
     "budget": 358400,
     "budgetPercentIncreaseRed": 20,
     "minimumChangeThreshold": 500,
     "showDetails": true
+  },
+  "lint-staged": {
+    "(apps|packages)/**/*.{js,ts,jsx,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.json": [
+      "prettier --write"
+    ],
+    "packages/prisma/schema.prisma": [
+      "prisma format"
+    ]
   },
   "scripts": {
     "dev": "./node_modules/.bin/dotenvx run -- next dev",
@@ -20,16 +50,20 @@
     "analyze": "./node_modules/.bin/dotenvx run -- ANALYZE=true next build",
     "analyze:server": "./node_modules/.bin/dotenvx run -- BUNDLE_ANALYZE=server next build",
     "analyze:browser": "./node_modules/.bin/dotenvx run -- BUNDLE_ANALYZE=browser next build",
-    "clean": "rm -rf .yarn/cache && rm -rf node_modules && rm -rf .next",
+    "clean": "rm -rf dist | exit 0 && rm -rf .next | exit 0 && rm -rf .yarn/cache | exit 0 && rm -rf .yarn/install-state.gz && rm -rf node_modules",
     "dev-https": "./node_modules/.bin/dotenvx run -- NODE_TLS_REJECT_UNAUTHORIZED=0 next dev --experimental-https",
     "dx": "./node_modules/.bin/dotenvx run -- yarn dev",
     "test-codegen": "./node_modules/.bin/dotenvx run -- yarn playwright codegen http://localhost:3000",
-    "type-check": "./node_modules/.bin/dotenvx run -- tsc --pretty --noEmit",
-    "type-check:ci": "./node_modules/.bin/dotenvx run -- tsc-absolute --pretty --noEmit",
+    "type-check-old": "./node_modules/.bin/dotenvx run -- tsc --pretty --noEmit",
+    "type-check:ci-old": "./node_modules/.bin/dotenvx run -- tsc-absolute --pretty --noEmit",
     "lint:fix": "eslint . --ext .ts,.js,.tsx,.jsx --fix",
     "lint:report": "eslint . --format json --output-file ../../lint-results/web.json",
     "check-changed-files": "ts-node scripts/ts-check-changed-files.ts",
-    "translate-locales": "ts-node scripts/check-missing-translations.ts"
+    "translate-locales": "ts-node scripts/check-missing-translations.ts",
+    "type-check": "yarn run type-check",
+    "type-check:ci": "yarn run type-check:ci --log-prefix=none",
+    "test-playwright": "yarn playwright test --config=playwright.config.ts",
+    "test": "vitest run"
   },
   "dependencies": {
     "@boxyhq/saml-jackson": "1.26.8",
@@ -66,7 +100,7 @@
     "accept-language-parser": "1.5.0",
     "bcryptjs": "2.4.3",
     "class-variance-authority": "0.7.0",
-    "classnames": "2.5.1",
+    "clsx": "2.1.1",
     "cmdk": "1.0.0",
     "cmk": "0.1.1",
     "date-fns": "3.6.0",

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "name": "@sln/exchangecalendar",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "description": "Fetch Microsoft Exchange calendars and availabilities using Exchange Web Services (EWS).",
+  "dependencies": {
+    "@sln/lib": "*",
+    "@sln/prisma": "*",
+    "@ewsjs/xhr": "^1.4.4",
+    "ews-javascript-api": "^0.11.0"
+  },
+  "devDependencies": {
+    "@sln/types": "*"
+  }
+}

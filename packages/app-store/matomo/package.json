@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "name": "@sln/matomo",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "dependencies": {
+    "@sln/lib": "*"
+  },
+  "devDependencies": {
+    "@sln/types": "*"
+  },
+  "description": "Google Analytics alternative that protects your data and your customers' privacy"
+}

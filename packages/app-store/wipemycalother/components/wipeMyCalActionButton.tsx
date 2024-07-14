@@ -1,0 +1,54 @@
+import { ConfirmDialog } from "./confirmDialog";
+import { trpc } from "@sln/trpc/react";
+import { Button } from "@sln/ui";
+import { useState } from "react";
+
+interface IWipeMyCalActionButtonProps {
+  bookingsEmpty: boolean;
+  bookingStatus:
+    | "upcoming"
+    | "recurring"
+    | "past"
+    | "cancelled"
+    | "unconfirmed";
+}
+
+const WipeMyCalActionButton = (props: IWipeMyCalActionButtonProps) => {
+  const { bookingsEmpty, bookingStatus } = props;
+  const [openDialog, setOpenDialog] = useState(false);
+  const { isSuccess, isPending, data } = trpc.viewer.integrations.useQuery({
+    variant: "other",
+    onlyInstalled: undefined,
+  });
+
+  if (bookingStatus !== "upcoming" || bookingsEmpty) {
+    return <></>;
+  }
+  const wipeMyCalCredentials = data?.items.find(
+    (item: { type: string }) => item.type === "wipemycal_other"
+  );
+
+  const [credentialId] = wipeMyCalCredentials?.userCredentialIds || [false];
+
+  return (
+    <>
+      {data && isSuccess && !isPending && credentialId && (
+        <div className="mb-4">
+          <ConfirmDialog
+            isOpenDialog={openDialog}
+            setIsOpenDialog={setOpenDialog}
+          />
+          <Button
+            color="primary"
+            onClick={() => setOpenDialog(true)}
+            data-testid="wipe-today-button"
+          >
+            Wipe Today
+          </Button>
+        </div>
+      )}
+    </>
+  );
+};
+
+export { WipeMyCalActionButton };

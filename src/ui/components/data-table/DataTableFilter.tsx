@@ -1,7 +1,7 @@
 import type { Column } from "@tanstack/react-table";
 import type { LucideIcon } from "lucide-react";
 
-import { classNames } from "@sln/lib";
+import classNames from "clsx/lite";
 
 import { Icon } from "../..";
 import { Badge } from "../badge";

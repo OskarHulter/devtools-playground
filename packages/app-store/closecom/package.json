@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "name": "@sln/closecom",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "description": "Close is the inside sales CRM of choice for startups and SMBs. Make more calls, send more emails and close more deals starting today.",
+  "scripts": {
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@sln/lib": "*",
+    "@sln/prisma": "*"
+  },
+  "devDependencies": {
+    "@sln/types": "*"
+  }
+}

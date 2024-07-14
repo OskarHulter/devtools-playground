@@ -2,7 +2,7 @@ import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
 import type { ReactNode } from "react";
 import React from "react";
 
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx/lite";
 
 export const Group = (
 	props: RadioGroupPrimitive.RadioGroupProps & { children: ReactNode },

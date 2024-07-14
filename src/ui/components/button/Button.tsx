@@ -4,7 +4,7 @@ import type { LinkProps } from "next/link";
 import Link from "next/link";
 import React, { forwardRef } from "react";
 
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx/lite";
 
 import { Icon, type IconName } from "../..";
 import { Tooltip } from "../tooltip";

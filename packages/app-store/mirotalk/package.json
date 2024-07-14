@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "name": "@sln/mirotalk",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "dependencies": {
+    "@sln/lib": "*"
+  },
+  "devDependencies": {
+    "@sln/types": "*"
+  },
+  "description": "Free WebRTC - P2P - Simple, Secure, Fast Real-Time Video Conferences Up to 4k and 60fps, compatible with all browsers and platforms."
+}

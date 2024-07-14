@@ -1,7 +1,7 @@
 import type React from "react";
 import { forwardRef, useId, useState } from "react";
 
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx/lite";
 import { useLocale } from "@sln/lib/hooks/useLocale";
 
 import { Icon, Skeleton } from "../../..";

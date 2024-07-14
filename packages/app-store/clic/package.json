@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "name": "@sln/clic",
+  "version": "0.1.0",
+  "main": "./index.ts",
+  "dependencies": {
+    "@sln/lib": "*"
+  },
+  "devDependencies": {
+    "@sln/types": "*"
+  },
+  "description": "Create, List and Interact with Your Cal.com links and connections easily."
+}

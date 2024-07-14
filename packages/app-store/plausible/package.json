@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "name": "@sln/plausible",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "description": "Simple, privacy-friendly Google Analytics alternative.",
+  "dependencies": {
+    "@sln/lib": "*"
+  },
+  "devDependencies": {
+    "@sln/types": "*"
+  }
+}

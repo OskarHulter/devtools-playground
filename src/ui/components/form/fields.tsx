@@ -8,7 +8,7 @@ import type {
 } from "react-hook-form";
 import { FormProvider, useFormContext } from "react-hook-form";
 
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx/lite";
 import { getErrorFromUnknown } from "@sln/lib/errors";
 import { useLocale } from "@sln/lib/hooks/useLocale";
 

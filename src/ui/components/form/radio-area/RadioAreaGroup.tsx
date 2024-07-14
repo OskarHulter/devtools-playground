@@ -2,7 +2,7 @@ import { useId } from "@radix-ui/react-id";
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
 import type { ReactNode } from "react";
 
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx/lite";
 
 type RadioAreaProps = RadioGroupPrimitive.RadioGroupItemProps & {
 	children: ReactNode;

@@ -6,7 +6,7 @@ import type {
 } from "react-timezone-select";
 import BaseSelect from "react-timezone-select";
 
-import { classNames } from "@sln/lib";
+import classNames from "clsx/lite";
 import { SLN_VERSION } from "@sln/lib/constants";
 import {
 	filterByCities,

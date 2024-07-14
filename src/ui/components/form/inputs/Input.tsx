@@ -3,7 +3,7 @@ import type React from "react";
 import { forwardRef, useCallback, useId, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx/lite";
 import { useLocale } from "@sln/lib/hooks/useLocale";
 
 import { Alert, Icon, Input, InputField, Tooltip } from "../../..";
