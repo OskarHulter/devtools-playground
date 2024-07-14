@@ -24,13 +24,13 @@
     "incremental": true,
     "allowUmdGlobalAccess": true,
     "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
-      ]
-      ,
+      ],
       "~/*": [
         "modules/*"
       ],
@@ -55,17 +55,29 @@
     }
   },
   "include": [
-"../../packages/app-store/routing-forms/env.d.ts",
-"next-env.d.ts",
-"./src/types/*.d.ts",
-"./src/types/next-auth.d.ts",
-"**/*.ts",
-"**/*.tsx",
-".next/types/**/*.ts",
-"../../packages/features/bookings/lib/getReviewInfo.ts",
-"../../packages/features/bookings/lib/getUserBooking.ts"
-],
+    "../../apps/web/next-env.d.ts",
+    "../types/*.d.ts",
+    "../types/next-auth.d.ts",
+    "../../packages/app-store/routing-forms/env.d.ts",
+    "next-env.d.ts",
+    "./src/types/*.d.ts",
+    "./src/types/next-auth.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "../../packages/features/bookings/lib/getReviewInfo.ts",
+    "../../packages/features/bookings/lib/getUserBooking.ts",
+    "apps/main-app/server/main-app/server.jsr.js",
+    "apps/main-app/server/main/server.js",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.cjs",
+    "**/*.mjs"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "temp",
+    "build",
+    "dist"
   ]
 }

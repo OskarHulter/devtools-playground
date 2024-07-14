@@ -4,10 +4,10 @@ import type { LinkProps } from "next/link";
 import Link from "next/link";
 import React, { forwardRef } from "react";
 
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx";
 
 import { Icon, type IconName } from "../..";
-import { Tooltip } from "../tooltip";
+// import { Tooltip } from "../tooltip";
 
 type InferredVariantProps = VariantProps<typeof buttonClasses>;
 
@@ -194,11 +194,13 @@ export const Button = forwardRef<
 			)}
 			{loading && (
 				<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-					<svg
+					{/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
+<svg
 						className={classNames(
 							"mx-4 h-5 w-5 animate-spin",
 							color === "primary" ? "text-inverted" : "text-emphasis",
 						)}
+            
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 24 24"
@@ -287,13 +289,14 @@ const Wrapper = ({
 	}
 
 	return (
-		<Tooltip
-			data-testid="tooltip"
-			content={tooltip}
-			side={tooltipSide}
-			sideOffset={tooltipOffset}
-		>
-			{children}
-		</Tooltip>
+    {children}
 	);
 };
+
+// <Tooltip
+// 			data-testid="tooltip"
+// 			content={tooltip}
+// 			side={tooltipSide}
+// 			sideOffset={tooltipOffset}
+//       >
+//       </Tooltip>

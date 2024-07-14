@@ -3,7 +3,7 @@ import type React from "react";
 import { forwardRef, useCallback, useId, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx";
 import { useLocale } from "@sln/lib/hooks/useLocale";
 
 import { Alert, Icon, Input, InputField, Tooltip } from "../../..";
@@ -146,11 +146,8 @@ export const TextAreaField = forwardRef<
 			)}
 			<TextArea ref={ref} placeholder={placeholder} {...passThrough} />
 			{methods?.formState?.errors[props.name]?.message && (
-				<Alert
-					className="mt-1"
-					severity="error"
-					message={<>{methods.formState.errors[props.name]?.message}</>}
-				/>
+				// biome-ignore lint/complexity/noUselessFragments: <explanation>
+				<>{methods.formState.errors[props.name]?.message}</>
 			)}
 		</div>
 	);

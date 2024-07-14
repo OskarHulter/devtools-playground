@@ -1,6 +1,18 @@
-on: [pull_request]
+---
+name: Verify PR
 
-name: Build and Test
+on:  # yamllint disable-line rule:truthy
+  push: null
+  pull_request: null
+    [pull_request]
+
+permissions:
+      contents: read
+      packages: read
+      # To report GitHub Actions status checks
+      statuses: write
+
+
 
 jobs:
   build:
@@ -9,6 +21,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          # super-linter needs the full git history to get the
+          # list of files that changed across commits
+          fetch-depth: 0
 
       - name: Enable Corepack
         run: corepack enable
@@ -21,20 +37,27 @@ jobs:
       - name: Check dependencies
         run: |
           yarn install --immutable --immutable-cache
+          yarn dedupe --check
 
       - name: Prettier
         # run yarn style:fix if your PR fails here
         run: |
           yarn style:check
 
-      - name: Build
+      - name: Super-linter
+        uses: super-linter/super-linter@v6.7.0  # x-release-please-version
+        env:
+          # To report GitHub Actions status checks
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: build project
         run: |
           yarn build
 
-      # Tests are currently broken due to jest/ts/esm issues
-      # - name: Test
-      #   run: |
-      #     yarn test --ignore-cache
+      #Tests are currently broken due to jest/ts/esm issues
+      - name: Test project
+        run: |
+          yarn test --ignore-cache
 
       - uses: actions/upload-artifact@v4
         with:

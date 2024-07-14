@@ -1,10 +1,10 @@
-import { isSupportedCountry } from "libphonenumber-js";
-import { useState, useEffect } from "react";
+//import { isSupportedCountry } from "libphonenumber-js";
+import React from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
-import { classNames } from "@sln/lib";
-import { trpc } from "@sln/trpc/react";
+import classNames from "clsx";
+import { isSupportedCountry } from 'react-phone-number-input'
 
 export type PhoneInputProps = {
 	value?: string;
@@ -65,29 +65,37 @@ function BasePhoneInput({
 	);
 }
 
-const useDefaultCountry = () => {
-	const [defaultCountry, setDefaultCountry] = useState("us");
-	const query = trpc.viewer.public.countryCode.useQuery(undefined, {
-		refetchOnWindowFocus: false,
-		refetchOnReconnect: false,
-		retry: false,
-	});
+const data = {
+  countryCode: "us"
+}
+const { countryCode } = data;
 
-	useEffect(
-		function refactorMeWithoutEffect() {
-			const data = query.data;
-			if (!data?.countryCode) {
+const getCountry = () => countryCode;
+
+const useDefaultCountry = () => {
+	const [defaultCountry, setDefaultCountry] = React.useState("us");
+	// const query = trpc.viewer.public.countryCode.useQuery(undefined, {
+	// 	refetchOnWindowFocus: false,
+	// 	refetchOnReconnect: false,
+	// 	retry: false,
+	// });
+  
+  
+	React.useEffect(
+    function refactorMeWithoutEffect() {
+      const countryCode = getCountry();
+		
+			if (countryCode) {
 				return;
 			}
 
-			isSupportedCountry(data?.countryCode)
-				? setDefaultCountry(data.countryCode.toLowerCase())
+			isSupportedCountry(countryCode)
+				? setDefaultCountry(countryCode.toLowerCase())
 				: setDefaultCountry(
 						navigator.language.split("-")[1]?.toLowerCase() || "us",
 					);
-		},
-		[query.data],
-	);
+		},[]
+  );
 
 	return defaultCountry;
 };

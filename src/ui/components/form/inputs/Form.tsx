@@ -7,8 +7,11 @@ import type {
 } from "react-hook-form";
 import { FormProvider } from "react-hook-form";
 
-import { getErrorFromUnknown } from "@sln/lib/errors";
+type ErrorMessage = {
+  message: string;
+}
 
+const getErrorFromUnknown = (err: ErrorMessage) => err;
 import { showToast } from "../../..";
 
 type FormProps<T extends object> = {
@@ -33,8 +36,11 @@ const PlainForm = <T extends FieldValues>(
 					form
 						.handleSubmit(handleSubmit)(event)
 						.catch((err) => {
+              if (err === null) return;
+              if (err.message === null) return;
+              const { message } = getErrorFromUnknown(err);
 							// FIXME: Booking Pages don't have toast, so this error is never shown
-							showToast(`${getErrorFromUnknown(err).message}`, "error");
+							showToast(`${message}`, "error");
 						});
 				}}
 				{...passThrough}

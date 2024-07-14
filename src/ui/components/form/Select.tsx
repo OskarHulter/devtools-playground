@@ -1,7 +1,7 @@
 import type { GroupBase, InputProps, Props } from "react-select";
 import ReactSelect, { components } from "react-select";
 
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx";
 
 export type SelectProps<
 	Option,

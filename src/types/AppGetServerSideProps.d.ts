@@ -3,7 +3,7 @@ import type { CalendsoSessionUser } from "next-auth";
 
 import type prisma from "@sln/prisma";
 
-import type { ssrInit } from "@server/lib/ssr";
+import type { ssrInit } from "@sln/temp/server/lib/ssr";
 
 export type AppUser = CalendsoSessionUser | undefined;
 export type AppPrisma = typeof prisma;

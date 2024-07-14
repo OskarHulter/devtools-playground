@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import type { Dispatch, SetStateAction } from "react";
 import { useEffect, useState } from "react";
 
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx";
 import { useCompatSearchParams } from "@sln/lib/hooks/useCompatSearchParams";
 
 import { Button, Steps } from "../../..";

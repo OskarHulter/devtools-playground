@@ -1,4 +1,4 @@
-import cx from "@sln/lib/classNames";
+import cx from "clsx";
 
 import { Icon } from "..";
 import { Input } from "../components/form";

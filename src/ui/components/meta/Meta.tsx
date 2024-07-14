@@ -2,7 +2,7 @@ import Head from "next/head";
 import { createContext, useContext, useState, useEffect } from "react";
 import type { ReactNode } from "react";
 
-import { APP_NAME } from "@sln/lib/constants";
+const APP_NAME = 'name' // TODO: replace with your app name
 
 type MetaType = {
 	title: string;

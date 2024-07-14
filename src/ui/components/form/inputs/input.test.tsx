@@ -3,7 +3,6 @@ import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { render, fireEvent } from "@testing-library/react";
 import { vi } from "vitest";
 
-import type { UnstyledSelect } from "../../../form/Select";
 import {
 	EmailField,
 	TextAreaField,
@@ -155,7 +154,7 @@ describe("Tests for InputFieldWithSelect Component", () => {
 				{ value: "Option 2", label: "Option 2" },
 				{ value: "Option 3", label: "Option 3" },
 			],
-		} as unknown as typeof UnstyledSelect;
+		} as unknown;
 
 		const { getByText } = render(
 			<InputFieldWithSelect selectProps={selectProps} label="testSelect" />,

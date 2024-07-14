@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
-
-import { classNames } from "@sln/lib";
+import classNames from "clsx";
 
 export function ShellSubHeading(props: {
 	title: ReactNode;

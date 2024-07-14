@@ -8,11 +8,11 @@ import type {
 } from "react-hook-form";
 import { FormProvider, useFormContext } from "react-hook-form";
 
-import classNames from "@sln/lib/classNames";
-import { getErrorFromUnknown } from "@sln/lib/errors";
-import { useLocale } from "@sln/lib/hooks/useLocale";
+import classNames from "clsx";
+// import { getErrorFromUnknown } from "@sln/lib/errors";
+// import { useLocale } from "@sln/lib/hooks/useLocale";
 
-import { Alert, showToast } from "../";
+// import { Alert, showToast } from "../";
 
 type InputProps = Omit<JSX.IntrinsicElements["input"], "name"> & {
 	name: string;
@@ -66,7 +66,7 @@ type InputFieldProps = {
 const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
 	function InputField(props, ref) {
 		const id = useId();
-		const { t } = useLocale();
+		const t = (x: string) => x; //useLocale();
 		const methods = useFormContext();
 		const {
 			label = t(props.name),
@@ -113,11 +113,14 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
 				)}
 				{hint}
 				{methods?.formState?.errors[props.name]?.message && (
-					<Alert
-						className="mt-1"
-						severity="error"
-						message={<>{methods.formState.errors[props.name]?.message}</>}
-					/>
+					// <Alert
+					// 	className="mt-1"
+					// 	severity="error"
+					// 	message={}
+					// />
+          <p>
+            {methods.formState.errors[props.name]?.message || 'Error'}
+          </p>
 				)}
 			</div>
 		);
@@ -206,7 +209,7 @@ export const TextAreaField = forwardRef<
 	TextAreaFieldProps
 >(function TextField(props, ref) {
 	const id = useId();
-	const { t } = useLocale();
+  const t = (x: string) => x; //useLocale();
 	const methods = useFormContext();
 	const {
 		label = t(props.name as string),
@@ -225,11 +228,10 @@ export const TextAreaField = forwardRef<
 			)}
 			<TextArea ref={ref} placeholder={placeholder} {...passThrough} />
 			{methods?.formState?.errors[props.name]?.message && (
-				<Alert
-					className="mt-1"
-					severity="error"
-					message={<>{methods.formState.errors[props.name]?.message}</>}
-				/>
+        <p>
+          {/* biome-ignore lint/complexity/noUselessFragments: <explanation> */}
+          <>{methods.formState.errors[props.name]?.message || 'Error'}</>
+        </p>
 			)}
 		</div>
 	);
@@ -257,12 +259,14 @@ const PlainForm = <T extends FieldValues>(
 					form
 						.handleSubmit(handleSubmit)(event)
 						.catch((err) => {
-							showToast(`${getErrorFromUnknown(err).message}`, "error");
+							// showToast(`${getErrorFromUnknown(err).message}`, "error");
+              console.log(err);
 						});
 				}}
 				{...passThrough}
 			>
 				{
+          // @ts-ignore
 					/* @see https://react-hook-form.com/advanced-usage/#SmartFormComponent */
 					React.Children.map(props.children, (child) => {
 						return typeof child !== "string" &&

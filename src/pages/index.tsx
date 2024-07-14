@@ -5,6 +5,10 @@ import styles from "@/styles/Home.module.css";
 import Marquee from "react-fast-marquee";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
+import Navbar from '@/ui/components/navigation/Navbar'
+import Footer from '@/ui/components/layout/Footer'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -47,6 +51,9 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<div className={styles.description}>
+
+      <Navbar />
+
 
       {error && <div style={{ color: 'red' }}>{error}</div>}
       <form onSubmit={onSubmit}>
@@ -156,6 +163,19 @@ export default function Home() {
 					</a>
 				</div>
 			</Marquee>
+      <Footer />
 		</>
 	);
+}
+
+export async function getStaticProps(props: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(props.locale, [
+        'common',
+        'footer',
+      ])),
+      // Will be passed to the page component as props
+    },
+  }
 }

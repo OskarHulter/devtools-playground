@@ -10,9 +10,10 @@ export const Breadcrumb = ({ children }: BreadcrumbProps) => {
 
 	const childrenSeperated = childrenArray.map((child, index) => {
 		// If not the last item in the array insert a /
+		const uniqueKey = `breadcrumb-${index}`;
 		if (index !== childrenArray.length - 1) {
 			return (
-				<Fragment key={index}>
+				<Fragment key={uniqueKey}>
 					{child}
 					<span>/</span>
 				</Fragment>

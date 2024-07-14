@@ -5,9 +5,9 @@ import "yet-another-react-lightbox/styles.css";
 
 import NextJsImage from "@/ui/components/nextjs-image";
 
-import image1 from "../../../../public/images/next.svg";
-import image2 from "../../../../public/images/next.svg";
-import image3 from "../../../../public/images/next.svg";
+import image1 from "@sln/public/images/next.svg";
+import image2 from "@sln/public/images/next.svg";
+import image3 from "@sln/public/images/next.svg";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 

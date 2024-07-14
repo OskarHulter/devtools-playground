@@ -3,7 +3,7 @@
 import Head from "next/head";
 
 import { APP_NAME, WEBSITE_URL } from "@sln/lib/constants";
-import { Button } from "@sln/ui";
+import Link from 'next/link'
 
 export default function MaintenancePage() {
 	return (
@@ -20,7 +20,7 @@ export default function MaintenancePage() {
 					The stresslessness.org team are performing scheduled maintenance. If
 					you have any questions, please contact support.
 				</p>
-				<Button href={`${WEBSITE_URL}/support`}>Contact Support</Button>
+				<Link href={`${WEBSITE_URL}/support`}>Contact Support</Link>
 			</div>
 		</div>
 	);

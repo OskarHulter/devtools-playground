@@ -139,3 +139,4 @@ apps/auth
 # React Component Preview
 previewConfig.json
 .VSCodeCounter/
+temp

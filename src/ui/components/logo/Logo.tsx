@@ -1,4 +1,4 @@
-import classNames from "@sln/lib/classNames";
+import classNames from "clsx";
 
 export default function Logo({
 	small,

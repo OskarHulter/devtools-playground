@@ -1,4 +1,4 @@
-import { classNames } from "@sln/lib";
+import classNames from "clsx";
 
 export function Label(props: JSX.IntrinsicElements["label"]) {
 	const { className, ...restProps } = props;
